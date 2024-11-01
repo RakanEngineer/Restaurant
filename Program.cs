@@ -10,13 +10,19 @@ namespace Restaurant
         {
             // Interface används för att koppla oss med
             // specifika implimentation, Chef, cookMaster, replicator
+
             Chef joe = new Chef("Joe");
-
             CookMaster5000 cookMaster = new CookMaster5000();
-
             EnterpriseReplicator replicator = new EnterpriseReplicator();
 
-            Bistro bistro = new Bistro("Green Joe's'", replicator);
+            List<IChef> chefList = new List<IChef>();
+            chefList.Add(new Chef("Joe"));
+            chefList.Add(new CookMaster5000());
+            chefList.Add(new EnterpriseReplicator());
+            chefList.Add(new Dog());
+
+
+            Bistro bistro = new Bistro("Green Joe's'", chefList[0]);
 
             bool isShouldNotExit = true;
 
