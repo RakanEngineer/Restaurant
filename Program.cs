@@ -16,7 +16,7 @@ namespace Restaurant
 
             EnterpriseReplicator replicator = new EnterpriseReplicator();
 
-            Bistro bistro = new Bistro("Green Joe's'", joe);
+            Bistro bistro = new Bistro("Green Joe's'", cookMaster);
 
             bool isShouldNotExit = true;
 
